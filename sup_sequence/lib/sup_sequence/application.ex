@@ -8,7 +8,7 @@ defmodule SupSequence.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      { SupSequence.Stash, 123 },
+      { SupSequence.Stash, Application.get_env(:sup_sequence, :initial_number)},
       { SupSequence.Server, nil },
     ]
 

@@ -1,6 +1,8 @@
 defmodule SupSequence.Server do
   use GenServer
 
+  @vsn 0
+
   def start_link(_) do
     GenServer.start_link(__MODULE__, nil, name: __MODULE__) 
   end
